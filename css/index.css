@@ -1,4 +1,33 @@
 header {
     width: 100%;
-    background: url("../images/gratisography-waves-crashing-rocks.jpg")
+    /* background: url("../images/gratisography-waves-crashing-rocks.jpg") no-repeat; */
+    height: 500px;
+    /* background-size: 100% 500px; */
+    position: relative;
+    font-family: "方正清刻本悦宋简体";
+    /* text-align: center; */
+}
+header::before {
+    content: "";
+    width: 100%;
+    height: 500px;
+    background: url("../images/gratisography-waves-crashing-rocks.jpg") no-repeat;
+    background-size: 100% 500px;
+    z-index: -1;
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.title {
+    /* margin: 200px auto; */
+    position: absolute;
+    left: 317px;
+    top: 200px;
+    font-size: 20px;
+}
+.title2 {
+    position:absolute;
+    left: 317px;
+    top: 250px;
 }
