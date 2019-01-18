@@ -1,0 +1,2 @@
+# mingjieveryday.top
+my blog
