@@ -9,3 +9,26 @@
         url("../fonts/方正清刻本悦宋简体.woff") format("woff"),
         url("../fonts/方正清刻本悦宋简体.svg") format("svg");
 }
+ul {
+    list-style-type:none;
+}
+a {
+    text-decoration:none;
+}
+body {
+    background-color: rgba(225, 225, 225, 1);
+}
+.w {
+    width: 85%;
+    margin: 0 auto;
+}
+.clearfloat:after {
+    display:block;
+    clear:both;
+    content:"";
+    visibility:hidden;
+    height:0;
+}
+.clearfloat{
+    zoom:1;
+}
