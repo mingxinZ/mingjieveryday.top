@@ -94,6 +94,9 @@ header > nav a:hover {
     font-size:20px;
     font-weight: 300;
 }
+.middle .m-title li a:hover {
+    color: #cccccc;
+}
 .middle .m-title li p {
     color: rgba(0, 0, 0, 0.6);
     font-size: 16px;
