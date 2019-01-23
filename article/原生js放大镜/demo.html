@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            margin-top: 100px;
+            margin-left: 30px;
+        }
+        #smPic {
+            float: left;
+            position: relative;
+            font-size: 0;
+        }
+        #bigPic {
+            float: left;
+            margin-left:30px; 
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            display: none;
+            position: relative;
+        }
+        #bigPic > img {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #slider {
+            background: rgba(0, 0, 0, 0.2);
+            width: 200px;
+            height: 150px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: move;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="smPic">
+            <img src="../../images/gratisography-waves-crashing-rocks.jpg" width="400" height="300">
+            <div id="slider"></div>
+        </div>
+        <div id="bigPic">
+            <img src="../../images/gratisography-waves-crashing-rocks.jpg" width="800" height="600">
+        </div>
+
+    </div>
+    <script>
+        var smPic=document.getElementById("smPic");
+        var slider=document.getElementById("slider");
+        var bigPic=document.getElementById("bigPic");
+        var bigImg=bigPic.getElementsByTagName("img")[0];
+        smPic.onmouseover=function(e){
+            slider.style.display="block";
+            bigPic.style.display="block";
+            // e.clientX=this.offsetLeft+slider.offsetLeft+slider.offsetWidth/2;
+            // e.clientY=this.offsetTop+slider.offsetTop+slider.offsetHeight/2;
+            
+        };
+        smPic.onmouseout=function(){
+            slider.style.display="none";
+            bigPic.style.display="none";
+        };
+        smPic.onmousemove=function(e){
+
+            var left=e.clientX-slider.offsetWidth/2-this.offsetLeft;
+            var top=e.clientY-slider.offsetHeight/2-this.offsetTop;
+            if(left<0){
+                slider.style.left=0;
+                
+            }else if (left>this.offsetWidth-slider.offsetWidth){
+                slider.style.left=(this.offsetWidth-slider.offsetWidth)+"px";
+                
+            }else{
+                slider.style.left=left+"px";
+                
+            }
+            if(top<0){
+                slider.style.top=0;
+                
+            }else if (top>this.offsetHeight-slider.offsetHeight){
+                slider.style.top=(this.offsetHeight-slider.offsetHeight)+"px";
+                
+            }else{
+                slider.style.top=top+"px";
+                
+            }
+            var bigL=-(left*bigImg.offsetWidth/this.offsetWidth);
+            var bigT=-(top*bigImg.offsetHeight/this.offsetHeight);
+            // bigImg.style.left=-(left*bigImg.offsetWidth/this.offsetWidth)+"px";
+            // bigImg.style.top=-(top*bigImg.offsetHeight/this.offsetHeight)+"px";
+            if(bigL>0){
+                bigImg.style.left=0;
+                
+            }else if (bigL<-800) {
+                bigImg.style.left=-800+"px";
+            }
+            else{
+                bigImg.style.left=-(left*bigImg.offsetWidth/this.offsetWidth)+"px";
+                
+            }
+            if(bigT>0){
+                bigImg.style.top=0;
+                
+            }else if (bigT<-600) {
+                bigImg.style.top=-600+"px";
+            }
+            else{
+                bigImg.style.top=-(top*bigImg.offsetHeight/this.offsetHeight)+"px";
+                
+            }
+            
+
+
+        };
+    </script>
+</body>
+</html>
