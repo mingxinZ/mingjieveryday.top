@@ -4,36 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:640px)" />
     <title>THE ROAD</title>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">首页</a></li>
-                <li><a href="#">关于我</a></li>
-                <li><a href="#">文章</a></li>
-                <li><a href="#">分类</a></li>
-            </ul>
-        </nav>
-        <div class="title">
-            <h1>路</h1>
-            
-        </div>
-        <div class="title2">
-            <h3>人生要走多远</h3>
-            <h3>要熬过几重苦寒</h3>
-            <h3>才能在弹指之间，不悔不怨</h3>
-            
-        </div>
-        
+        <!-- <div class="container-fluid"> -->
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">关于我</a></li>
+                    <li><a href="#">文章</a></li>
+                    <li><a href="#">分类</a></li>
+                </ul>
+            </nav>
+            <div class="row">
+                <div class="title col-xs-4">
+                    <h1>路</h1>
+                </div>
+                <div class="title2 col-xs-6">
+                    <h3>人生要走多远</h3>
+                    <h3>要熬过几重苦寒</h3>
+                    <h3>才能在弹指之间，不悔不怨</h3>
+                </div>
+            </div>
+        <!-- </div> -->
     </header>
     <section class="w middle clearfloat">
-        <div class="article">
-            <div class="date clearfloat">
-                <ul class="dateList">
+        <div class="article clearfloat">
+            <!-- <div class="date clearfloat">
+                <ul class="dateList clearfloat">
                     <li>2019/01/22</li>
                     <li>2019/01/14</li>
                     <li>2019/01/08</li>
@@ -44,8 +47,73 @@
                     <li>2018/11/25</li>
                     <li>2018/11/10</li>
                 </ul>
-            </div>
-            <div class="m-title">
+            </div> -->
+            <ul class="article-list">
+                <li class="list-item">
+                    <span class="date">2019/03/16</span>
+                    <div class="article-title">
+                        <h1>
+                            <a href="#">save音乐APP项目总结</a>
+                        </h1>
+                        <span class="desc">vue、vuex、node.js、express、mongoose</span>
+                    </div>
+                </li>
+                <li class="list-item">
+                        <span class="date">2019/01/22</span>
+                        <div class="article-title">
+                            <h1>
+                                <a href="#">原生js瀑布流效果</a>
+                            </h1>
+                            <span class="desc">原生javascript、css3过渡、懒加载、响应式</span>
+                        </div>
+                </li>
+                <li class="list-item">
+                        <span class="date">2018/11/10</span>
+                        <div class="article-title">
+                            <h1>
+                                <a href="#">面向对象思想编程初体验</a>
+                            </h1>
+                            <span class="desc">JavaScript中的面向对象</span>
+                        </div>
+                </li>
+                <li class="list-item">
+                        <span class="date">2018/11/20</span>
+                        <div class="article-title">
+                            <h1>
+                                <a href="#">canvas粒子特效</a>
+                            </h1>
+                            <span class="desc">简单简陋的粒子特效</span>
+                        </div>
+                </li>
+                <li class="list-item">
+                        <span class="date">2018/10/29</span>
+                        <div class="article-title">
+                            <h1>
+                                <a href="#">轮播图特效</a>
+                            </h1>
+                            <span class="desc">原生javascript</span>
+                        </div>
+                </li>
+                <!-- <li class="list-item">
+                        <span class="date">2019//22</span>
+                        <div class="article-title">
+                            <h1>
+                                <a href="#">原生js瀑布流效果</a>
+                            </h1>
+                            <span class="desc">原生javascript、css3过渡、懒加载、响应式</span>
+                        </div>
+                </li>
+                <li class="list-item">
+                        <span class="date">2019/01/22</span>
+                        <div class="article-title">
+                            <h1>
+                                <a href="#">原生js瀑布流效果</a>
+                            </h1>
+                            <span class="desc">原生javascript、css3过渡、懒加载、响应式</span>
+                        </div>
+                </li> -->
+            </ul>
+            <!-- <div class="m-title">
                 <ul class="titleList">
                     <li>
                         <a href="article/瀑布流/demo.html">原生js瀑布流效果</a>
@@ -86,12 +154,42 @@
                     </li>
                     
                 </ul>
-            </div>
+            </div> -->
         </div>
         <div class="sideBar">
             <div class="image"></div>
+            <ul class="social-items">
+                <li><a><span><i class="iconfont">&#xe68e;</i></span></a></li>
+                <li><a><span><i class="iconfont">&#xe691;</i></span></a></li>
+                <li><a><span><i class="iconfont">&#xe9d4;</i></span></a></li>
+                <li><a><span><i class="iconfont">&#xe606;</i></span></a></li>
+            </ul>
+            <div class="aboutMe">
+                <p>23周岁 INTP 处女座</p>
+                <p>喜欢探索广阔的未知领域</p>
+                <p>曾经的文学青年，</p>
+                <p>如今的技术青年。</p>
+            </div>
+            <h3 class="tags-title">分类标签</h3>
+            <div class="tags">
+                <a href="javascript:;">读书笔记</a>
+                <a href="javascript:;">个人感悟</a>
+                <a href="javascript:;">技术研究</a>
+                <a href="javascript:;">项目展示</a>
+                <a href="javascript:;">CSS3</a>
+                <a href="javascript:;">HTML5</a>
+                <a href="javascript:;">JavaScript</a>
+                <a href="javascript:;">Vue.JS</a>
+                <a href="javascript:;">Node.JS</a>
+            </div>
         </div>
     </section>
+    <footer>
+        <div class="w">
+            <p class="copyright">Copyright © 郑茗馨 2019 黑ICP备19000601号-1
+            </p>
+        </div>
+    </footer>
     
 </body>
 </html>

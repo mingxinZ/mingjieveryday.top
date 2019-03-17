@@ -1,0 +1,10 @@
+.sideBar {
+    display: none;
+}
+.article {
+    width: 100%;
+    float: none;
+}
+.list-item .article-title .desc {
+    display: none;
+}
